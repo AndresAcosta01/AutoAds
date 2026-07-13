@@ -1,0 +1,12 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "AutoAds",
+            "type": "shell",
+            "command": "gradlew.bat installDebug",
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}
