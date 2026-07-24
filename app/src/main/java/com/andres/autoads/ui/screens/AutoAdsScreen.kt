@@ -30,6 +30,11 @@ fun AutoAdsScreen(
 
     val context = LocalContext.current
 
+    android.util.Log.d(
+        "AutoAds",
+        "UI: serviceState = ${viewModel.serviceState}"
+    )
+
 
     Box(
         modifier = Modifier

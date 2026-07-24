@@ -124,12 +124,14 @@ class MainViewModel : ViewModel() {
 
     fun detenerServicio() {
 
+        android.util.Log.d(
+            "AutoAds",
+            "ViewModel: detenerServicio()"
+        )
 
         MotorAutoAds.pausar()
 
-
         ServicioEstado.activo = false
-
 
         serviceState =
             ServiceState.STOPPED

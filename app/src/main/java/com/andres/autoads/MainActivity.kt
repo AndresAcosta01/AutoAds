@@ -35,16 +35,19 @@ class MainActivity : ComponentActivity() {
                 intent: Intent?
             ) {
 
-
                 if (
                     intent?.action ==
                     AppEvents.DETENER_SERVICIO
                 ) {
 
+                    android.util.Log.d(
+                        "AutoAds",
+                        "MainActivity: broadcast recibido"
+                    )
+
                     viewModel.detenerServicio()
 
                 }
-
 
             }
 
@@ -134,10 +137,10 @@ class MainActivity : ComponentActivity() {
         viewModel.actualizarSuperposicion(
             permisoSuperposicionActivo(this)
         )
-        
+
         viewModel.revisarEstadoServicio()
 
-        
+
         viewModel.sincronizarEstado()
 
         if (

@@ -182,12 +182,12 @@ class OverlayService : Service() {
 
             ServicioEstado.activo = false
 
+            android.util.Log.d("AutoAds", "Overlay: enviando broadcast DETENER_SERVICIO")
 
-            sendBroadcast(
-                Intent(
-                    AppEvents.DETENER_SERVICIO
-                )
-            )
+
+            val intent = Intent(AppEvents.DETENER_SERVICIO)
+            intent.setPackage(packageName)
+            sendBroadcast(intent)
 
 
             stopSelf()
